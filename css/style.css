@@ -1,0 +1,24 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,b,em,span,i,pre,hr,form,fieldset,label,input,select,button,textarea,blockquote,header,footer,article,aside,section,nav,menu,hgroup{padding:0;margin:0}
+body{-webkit-text-size-adjust:none;color:#333;font:12px/1.5 "Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,"宋体", "黑体", Arial, sans-serif;background:#FBFBFB;}
+/*body{-webkit-text-size-adjust:none;color:#333;font:12px/1.5 "Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,arial,sans-serif;background:#fff;}*/
+input,select,textarea,button,label{font-size:100%;vertical-align:middle;outline:none}
+ul,ol,li{list-style:none}
+img{border:none;vertical-align:middle}
+iframe{border:0;vertical-align:top}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;font-family:"Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,arial,sans-serif;}
+address,cite,code,em,th,i{font-weight:normal;font-style:normal}
+table{border-collapse:collapse;border-spacing:0}
+a{color:#555555;text-decoration:none;outline:none}
+a:hover{color:#E61415;text-decoration:underline}
+.hide{display:none}.show{display:block}
+.fl{float:left}.fr{float:right}
+.fix{zoom:1;overflow:hidden}
+.clearfix{zoom:1;clear:both}
+.clearfix:after{display:block;overflow:hidden;clear:both;height:0;visibility:hidden;content:"."}
+.wraper{width:100%;background:#fff}
+.layout{width:1000px;margin:0 auto}
+
+.li-txt12 li{font-size:12px;height:24px;line-height:24px;zoom:1;overflow:hidden}
+.li-txt14 li{font-size:14px;height:30px;line-height:28px;zoom:1;overflow:hidden}
+
+.li-txt14-2 li{font-size:14px;height:33px;line-height:33px;zoom:1;overflow:hidden}

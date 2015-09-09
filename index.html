@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>汇海基金</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+
+<body>
+<div class="layout clearfix">
+  <div class="fl" style="margin:35px 0"><a href=""><img src="images/logo.png"></a></div>
+  <div class="fr soso">
+    <ul>
+      <li class="kefu">
+        <h6><i>在线客服：</i><a href="">400 650 6666</a></h6>
+      </li>
+      <li class="s-put">
+        <input type="text" class="ku">
+      </li>
+      <li>
+        <input type="button" class="su" name="button" id="button" value="搜索">
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="nav">
+  <div class="layout"><a href="" class="on">首页</a><a href="">关于我们</a><a href="">基金产品 </a><a href="">专户理财 </a><a href="">资讯中心</a><a href="">客户服务 </a><a href="">网上交易</a><a href="">我的账户</a></div>
+</div>
+<!--焦点图开始-->
+
+<div class="main_visual">
+  <div class="flicking_con"> <a href="#" class="">1</a> <a href="#" class="">2</a> <a href="#" class="on">3</a>  </div>
+  <div class="main_image">
+    <ul style="width: 1920px; overflow: visible;">
+      <a href="/About/" target="_blank" style="float: none; display: block; position: absolute; top: 0px; left: -3806px; width: 1903px;">
+      <li style="background:url(images/banner01.jpg) center top;"></li>
+      </a> <a href="/Account/" target="_blank" style="float: none; display: block; position: absolute; top: 0px; left: -1903px; width: 1903px;">
+      <li style="background:url(images/banner02.jpg) center top;"></li>
+      </a> <a href="/Service/" target="_blank" style="float: none; display: block; position: absolute; top: 0px; left: 0px; width: 1903px;">
+      <li style="background:url(images/banner03.jpg) center top;"></li>
+      </a>
+    </ul>
+    <a href="javascript:;" id="btn_prev" style="width: 1920px; overflow: visible; opacity: 0;"></a><a href="javascript:;" id="btn_next" style="width: 1920px; overflow: visible; opacity: 0;"></a> </div>
+  <div class="ban_rtbg"> </div>
+  <div class="ban_rt"> <a href="#">
+    <div class="ban_rt01 rt01 wrt"><b>账户查询</b></div>
+    </a> <a href="#">
+    <div class="ban_rt01 rt02 wrt"><b>免费开户</b></div>
+    </a> <a href="#">
+    <div class="ban_rt01 rt03 wrt"><b>网上交易</b></div>
+    </a> <a href="#">
+    <div class="ban_rt01 rt04 wrt"><b>交易费率</b></div>
+    </a> </div>
+</div>
+<script type="text/javascript">
+        // $(document).ready(function () {
+
+        // $('.sy01').find('.sy01_1:last').hide();
+
+        $(".main_visual").hover(function () {
+            $("#btn_prev,#btn_next").fadeIn();
+        }, function () {
+            $("#btn_prev,#btn_next").fadeOut();
+        });
+
+        $dragBln = false;
+
+        $(".main_image").touchSlider({
+            flexible: true,
+            speed: 200,
+            btn_prev: $("#btn_prev"),
+            btn_next: $("#btn_next"),
+            paging: $(".flicking_con a"),
+            counter: function (e) {
+                $(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+            }
+        });
+
+        $(".main_image").bind("mousedown", function () {
+            $dragBln = false;
+        });
+
+        $(".main_image").bind("dragstart", function () {
+            $dragBln = true;
+        });
+
+        $(".main_image a").click(function () {
+            if ($dragBln) {
+                return false;
+            }
+        });
+
+        timer = setInterval(function () {
+            $("#btn_next").click();
+        }, 5000);
+
+        $(".main_visual").hover(function () {
+            clearInterval(timer);
+        }, function () {
+            timer = setInterval(function () {
+                $("#btn_next").click();
+            }, 5000);
+        });
+
+        $(".main_image").bind("touchstart", function () {
+            clearInterval(timer);
+        }).bind("touchend", function () {
+            timer = setInterval(function () {
+                $("#btn_next").click();
+            }, 5000);
+        });
+
+        // });
+
+
+    </script> 
+
+<!--焦点图结束-->
+
+<div class="layout">
+  <div class="mt20 clearfix">
+    <div class="fl330">
+      <ul>
+        <li><img src="images/cpys_img03.png" width="210px" height="130px" class="ml55 mt20">
+          <h2>低门槛，高收益</h2>
+          <p>100元起投，年化收益11.5-15.5%</p>
+          <p>稳健的投资产品，坐享财富盛宴</p>
+        </li>
+      </ul>
+    </div>
+    <div class="fl330">
+      <ul>
+        <li><img src="images/cpys_img02.png" width="210px" height="130px" class="ml55 mt20">
+          <h2>精英管理</h2>
+          <p>高效务实管理团队</p>
+          <p>体验专业投资服务</p>
+        </li>
+      </ul>
+    </div>
+    <div class="fl330">
+      <ul>
+        <li><img src="images/cpys_img01.png" width="210px" height="130px" class="ml55 mt20">
+          <h2>安全收益</h2>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;抵押物&nbsp;&nbsp;&nbsp;&nbsp;风险保证金</p>
+          <p>资金安全保障计划&nbsp;&nbsp;360&deg;全方位保障</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div><img src="images/qusi.jpg" width="1000px" height="490px" class="mt20"> </div>
+</div>
+
+<!--新闻开始-->
+<div class="layout">
+<div class="mt20 clearfix">
+  <div class="article_list pt20 ">
+    <div class="art_left">
+      <div class="txt_list">
+        <dl>
+          <dt><i class="info1"></i>
+            <h3>基金百科</h3>
+            <small><a target="_blank" href="#">更多 &gt;</a></small></dt>
+          <dd>
+            <ul>
+              <li> <a target="_blank" href="#"> 博时基金宏观策略部总经理魏凤春：山雨欲来 </a> </li>
+              <li> <a target="_blank" title="博时宏观策略部总经理魏凤春：顺"改"而上" href="#"> 博时宏观策略部总经理魏凤春：顺"改"而上 </a> </li>
+              <li> <a target="_blank" title="博时宏观策略部总经理魏凤春：不拒细流" href="#"> 博时宏观策略部总经理魏凤春：不拒细流 </a> </li>
+              <li> <a target="_blank" title="博时基金宏观策略部总经理魏凤春：定点打击" href="#"> 博时基金宏观策略部总经理魏凤春：定点打击 </a> </li>
+              <li> <a target="_blank" title="博时基金宏观策略部总经理魏凤春：韬光养晦" href="#"> 博时基金宏观策略部总经理魏凤春：韬光养晦 </a> </li>
+              <li> <a target="_blank" title="博时基金宏观策略部总经理魏凤春：中军守正" href="#"> 博时基金宏观策略部总经理魏凤春：中军守正 </a> </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="art_right">
+      <div class="txt_list" style="height: 150px;margin-bottom: 16px;">
+        <dl>
+          <dt><i class="info2"></i>
+            <h3>汇海动态</h3>
+            <small><a target="_blank" href="#">更多 &gt;</a></small></dt>
+          <dd>
+            <ul>
+              <li> <a target="_blank" href="#"> 收盘点评：沪指暴跌8.49%，创8年来单日最大跌幅 </a> </li>
+              <li> <a target="_blank" title="博时基金高宇：产业债市场的投资模式再思考" href="#"> 博时基金高宇：产业债市场的投资模式再思考 </a> </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <div class="txt_list" style="height: 150px">
+        <dl>
+          <dt><i class="info3"></i>
+            <h3>行业研究</h3>
+            <small><a target="_blank" href="#">更多 &gt;</a></small></dt>
+          <dd>
+            <ul>
+              <li> <a target="_blank" href="#"> 博时基金管理有限公司关于旗下基金持有的长期停... </a> </li>
+              <li> <a target="_blank" title="博时黄金交易型开放式证券投资基金I类场外份额分红公告" href="#"> 博时黄金交易型开放式证券投资基金I类场外份额... </a> </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+</div>
+
+<!--页脚导航-->
+<div class="mt20 clearfix">
+<div class="footer_link">
+		<dl class="ft0">
+			<dt><b>关于我们</b></dt>
+			<dd>
+				<ul>
+					<li><a href="#" target="_blank">公司简介</a></li>
+					<li><a href="#" target="_blank">精英团队</a></li>
+					<li><a href="#" target="_blank">组织架构</a></li>
+					
+				</ul>
+			</dd>
+		</dl>
+		<dl class="ft0">
+			<dt><b>客户服务</b></dt>
+			<dd>
+				<ul>
+					<li><a href="#" target="_blank">客户服务中心</a></li>
+					<li><a href="#" target="_blank">优惠快讯</a></li>
+					<li><a href="#" target="_blank">投诉受理</a></li>
+					<li><a href="#" target="_blank">在线客服</a></li>
+				</ul>
+				
+			</dd>
+		</dl>
+		<dl class="ft0">
+			<dt><b>企业文化</b></dt>
+			<dd>
+				<ul>
+					<li><a href="#" target="_blank">企业精神</a></li>
+					<li><a href="#" target="_blank">战略方针</a></li>
+					<li><a href="#" target="_blank">爱心基金</a></li>
+                    <li><a href="#" target="_blank">价值取向</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl class="ft0">
+			<dt><b>诚聘英才</b></dt>
+			<dd>
+				<ul>
+					<li><a href="#" target="_blank">招聘公告</a></li>
+					<li><a href="#" target="_blank">社会招聘</a></li>
+					<li><a href="#" target="_blank">校园招聘</a></li>
+				
+				
+			</dd>
+		</dl>
+		<dl>
+			<dt><b>联系我们</b></dt>
+			<dd>
+				<ul>
+					<li><a href="#" target="_blank">联系我们</a></li>
+					<li><a href="#" target="_blank">网站地图</a></li>
+                    <li><a href="#" target="_blank">在线留言</a></li>
+				</ul>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</div>
+
+
+<div class="foot mt20">
+  <div class="cter"> Copyright &copy; 2015 szhhjj.com All Rights Reserved   深圳汇海股权投资基金管理有限公司  鄂icp备2015002</div>
+</div>
+</body>
+</html>
